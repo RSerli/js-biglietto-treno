@@ -7,9 +7,26 @@ const CostoChilometrico = 0.21 // Number Float
 const ScontoUnder18 = 20 // Number integer
 // Percentuale sconto Over65
 const ScontoOver65 = 40 // Number integer
+// Età del viaggiatore
+let EtàViaggiatore
+// Kilometraggio tratta
+let ChilometriTratta
+
 // ---- INPUT ----
+let isEtàChecked = false
+
 // chidere età del viaggiatore
+while (!isEtàChecked) {
+    EtàViaggiatore = parseInt(prompt("Indicami quanti anni ha")) // Number Integer | NaN
+    //  Controllo validità età inserita
+    if (EtàViaggiatore <= 0 || !EtàViaggiatore) {
+        alert("Età inserita errata!")
+    } else {
+        isEtàChecked = true
+    }
+}
 // chiedere qunanti chilometri è lunga la tratta per arrivare a destinazione
+
 // ---- CALCOLI ----
 // calcolo prezzo PIENO della tratta
 // calcolo prezzo SCONTATO della tratta under 18
