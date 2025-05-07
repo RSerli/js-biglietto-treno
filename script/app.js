@@ -58,3 +58,13 @@ console.log(
 )
 // ---- OUTPUT ----
 // Mostra prezzo finale a seconda dell'età del viaggiatore
+if (EtàViaggiatore < 18) {
+    console.log(`Il viaggiatore ha accesso allo sconto uder18
+        Costo del biglietto per la sua tratta: ${CostoBiglietttoScontato_Under18.toFixed(2)} €`)
+} else if (EtàViaggiatore >= 65) {
+    console.log(`Il viaggiatore ha accesso allo sconto over65
+        Costo del biglietto per la sua tratta: ${CostoBiglietttoScontato_Over65.toFixed(2)} €`)
+} else {
+    console.log(`Il viaggiatore non ha accesso ad alcun sconto
+        Costo del biglietto per la sua tratta: ${CostoBiglietttoIntero.toFixed(2)} €`)
+}
