@@ -39,7 +39,7 @@ while (!isChilometriChecked) {
 // ---- CALCOLI ----
 // calcolo prezzo PIENO della tratta
 const CostoBiglietttoIntero = ChilometriTratta * CostoChilometrico //Number Float
-console.log("Costo intero biglietto: " + CostoBiglietttoIntero + "€")
+console.log("Costo intero biglietto: " + CostoBiglietttoIntero.toFixed(2) + "€")
 // calcolo prezzo SCONTATO della tratta under 18
 const Sconto_Under18 = (CostoBiglietttoIntero * PercentualeSconto_Under18) / 100
 const CostoBiglietttoScontato_Under18 = CostoBiglietttoIntero - Sconto_Under18 //Number Float
