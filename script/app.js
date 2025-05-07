@@ -13,9 +13,8 @@ let EtàViaggiatore
 let ChilometriTratta
 
 // ---- INPUT ----
-let isEtàChecked = false
-
 // chidere età del viaggiatore
+let isEtàChecked = false
 while (!isEtàChecked) {
     EtàViaggiatore = parseInt(prompt("Indicami quanti anni ha")) // Number Integer | NaN
     //  Controllo validità età inserita
@@ -26,9 +25,19 @@ while (!isEtàChecked) {
     }
 }
 // chiedere qunanti chilometri è lunga la tratta per arrivare a destinazione
-
+let isChilometriChecked = false
+while (!isChilometriChecked) {
+    ChilometriTratta = parseInt(prompt("Indicami quanto lunga è la tratta")) // Number Integer | NaN
+    //  Controllo validità età inserita
+    if (ChilometriTratta <= 0 || !ChilometriTratta) {
+        alert("Inserire un chilometraggio corretto!")
+    } else {
+        isChilometriChecked = true
+    }
+}
 // ---- CALCOLI ----
 // calcolo prezzo PIENO della tratta
+const CostoTotaleTratta = ChilometriTratta * CostoChilometrico
 // calcolo prezzo SCONTATO della tratta under 18
 // calcolo prezzo SCONTATO della tratta over 65
 // ---- OUTPUT ----
